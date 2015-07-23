@@ -7,18 +7,13 @@
         <div>
             <h1><a href=''>The SportSpot</a></h1>
         </div>
-        
-        <div>
-            <p>published: 22.07.2015, 7:50</p>
-            <h2><a href=''>Hibachi!</a></h2>
-            <p>Gilbert Arenas is the GOAT. No doubt about it!</p>
+    {% for post in posts %}
+       <div>
+            <p>published: {{ post.published_date }}</p>
+            <h1><a href=" "></a>{{post.title}}</h1>
+            <p>{{post.text|linebreaks}}</p>
         </div>
-        
-        <div>
-            <p>published: 22.07.2015, 9:50</p>
-            <h2><a href=''>Lebron can't guard gil</a></h2>
-            <p>Gilbert Arenas came into the league, so Michael Jordan retired!</p>
-        </div>
+    {% endfor %}
         
     </body>
 
